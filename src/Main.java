@@ -17,13 +17,14 @@ public class Main {
         JOptionPane.showMessageDialog(null, "O nome digitado foi: " + outroTurista.getNome());
 
         String cpf = JOptionPane.showInputDialog("Entre com seu CPF: ");
-        if(Validacao.cpf(cpf)){
+        if(Validacao.validaCPF(cpf)){
             outroTurista.setCpf(cpf);
+            System.out.println("CPF valido!");
         } else {
-            System.out.println("CPF não validado!");
+            System.out.println("CPF não valido!");
         }
 
-        JOptionPane.showMessageDialog(null, outroTurista.getCpf() + "validado!");
+        JOptionPane.showMessageDialog(null, outroTurista.getCpf() + " validado!");
 
     }
 }
